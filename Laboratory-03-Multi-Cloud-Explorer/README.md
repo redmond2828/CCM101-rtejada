@@ -1,15 +1,28 @@
-# Laboratory 03: Become a Multi-Cloud Explorer
+## Linux Server Investigation
 
-## Mission Overview
+The Linux server environment was investigated using the KillerCoda Ubuntu Playground. The following system information was collected using Linux terminal commands.
 
-This laboratory activity focuses on exploring and comparing Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). It involves examining their core services, evaluating their strengths, and recommending appropriate cloud platforms based on different business requirements.
+| System Information | Finding |
+|---|---|
+| Operating System | Ubuntu 24.04.4 LTS |
+| CPU Model | Intel Xeon E312xx (Sandy Bridge, IBRS update) |
+| Number of CPU Cores | 1 CPU core |
+| Total RAM | 1.9 GiB |
+| Main File System | ext4 |
+| Main Partition | `/dev/vda1` with 19 GB capacity |
+| Used Storage | 5.4 GB |
+| Available Storage | 13 GB |
 
-## Mission Objectives
+### Equivalent Cloud Virtual-Machine Services
 
-- Explore the major public cloud platforms.
-- Identify the core services offered by AWS, Microsoft Azure, and Google Cloud Platform.
-- Compare equivalent services across the three cloud providers.
-- Analyze business requirements and recommend suitable cloud solutions.
-- Relate a Linux server environment to cloud virtual-machine services.
-- Create professional technical documentation using Markdown.
-- Continue developing an organized GitHub Cloud Computing Portfolio.
+This Ubuntu Linux server can be hosted using the following equivalent cloud services:
+
+- **AWS:** Amazon Elastic Compute Cloud (EC2)
+- **Microsoft Azure:** Azure Virtual Machines
+- **Google Cloud:** Google Compute Engine
+
+All three services can provide virtual machines capable of running an Ubuntu Linux operating system. The appropriate service would depend on the organization's budget, existing technologies, preferred cloud provider, and application requirements.
+
+### Screenshot Evidence
+
+![KillerCoda Linux Server Investigation](screenshots/killercoda-terminal.png)
