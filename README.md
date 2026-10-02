@@ -10,6 +10,7 @@ This repository serves as my Cloud Computing Portfolio. It contains my laborator
 - [Laboratory 02 - Build the Cloud Infrastructure Blueprint](Laboratory-02-Build-the-Cloud-Infrastructure-Blueprint)
 - [Laboratory 03 - Become a Multi-Cloud Explorer](Laboratory-03-Multi-Cloud-Explorer)
 - [Laboratory 04 - The Cloud-Native Engineer](Laboratory-04-Cloud-Native-Engineer/README.md)
+- [Laboratory 05 - The Cloud Data Engineer](Laboratory-05-Cloud-Data-Engineer/README.md)
 ## Topics Covered
 
 - Linux operating system
