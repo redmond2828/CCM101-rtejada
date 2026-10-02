@@ -1,88 +1,13 @@
-# Laboratory 06 – The Cloud Deployment Engineer
+# Laboratory 06 Reflection
 
-## Mission Overview
+This laboratory helped me understand how Docker Compose manages an application with multiple services. Instead of writing separate Docker commands for Nextcloud and MariaDB, I placed their settings in one YAML file. This made the deployment easier to follow because I could see the images, environment variables, and port mapping together. A single command started both services and created their shared network.
 
-This laboratory demonstrates a two-tier deployment using Nextcloud as the application service and MariaDB as the database service. I used Docker Compose in KillerCoda Ubuntu 24.04 to define, start, inspect, and remove the deployment.
+One challenge was learning how YAML indentation works. The structure depends on consistent spacing, so I had to check where each service and setting belonged. I also encountered a command issue because `docker compose` was unavailable in my environment. Using the working `docker-compose` command allowed me to continue.
 
-Both containers reached the `Up` state, and the Nextcloud setup page was accessible through port 8080. Administrator account creation and full Nextcloud installation were not completed.
+Another problem occurred when I ran commands from the home directory instead of the project folder. Compose could not find its configuration file. Later, the temporary session reset, removing the folder and containers. I recreated the configuration, deployed the services again, and completed the teardown in the same session. These problems taught me to check my working directory and save evidence promptly.
 
-## Objectives
+Environment variables helped me understand how an application receives its database settings. Nextcloud used the database name, username, password, and service hostname defined in the configuration. These variables provide configuration, but placing passwords in YAML does not make them secure.
 
-- Explain the roles of the application and database tiers.
-- Create a YAML configuration for multiple services.
-- Configure database settings through environment variables.
-- Deploy and inspect containers using Docker Compose.
-- Access the Nextcloud setup page.
-- Stop and remove the deployment.
+Seeing both containers marked `Up` and opening the Nextcloud setup page made the deployment process clearer to me. I did not complete administrator setup, so my evidence demonstrates container deployment and access to the installation page.
 
-## Tools Used
-
-- KillerCoda Ubuntu 24.04
-- Docker
-- Docker Compose 1.29.2
-- Nano
-- Nextcloud
-- MariaDB 10.6
-- GitHub
-
-## Commands Executed
-
-### Create and edit the configuration
-
-```bash
-mkdir -p ~/nextcloud-deployment
-cd ~/nextcloud-deployment
-nano docker-compose.yml
-```
-
-### Validate and deploy
-
-```bash
-docker-compose --version
-docker-compose config
-docker-compose up -d
-docker-compose ps
-```
-
-### Tear down
-
-```bash
-docker-compose down
-docker-compose ps
-```
-
-After a temporary session reset, I recreated the project folder and configuration before repeating the deployment and completing the teardown.
-
-## Skills Learned
-
-- Defining application and database services in YAML.
-- Using spaces and consistent indentation in configuration files.
-- Passing database configuration through environment variables.
-- Using a Compose service name as the database hostname.
-- Mapping a host port to a container port.
-- Checking container status and troubleshooting directory errors.
-- Managing multiple services with Docker Compose.
-
-## Documentation
-
-- [Multi-Tier Architecture](multi-tier-architecture.md)
-- [Docker Compose Deployment Guide](docker-compose-guide.md)
-- [Reflection](reflection.md)
-
-## Screenshot Evidence
-
-### Running Containers
-
-![Nextcloud and MariaDB running](screenshots/compose-deployment.png)
-
-### Nextcloud Setup Page
-
-![Nextcloud setup page](screenshots/nextcloud-web.png)
-
-### Deployment Teardown
-
-![Containers and network removed](screenshots/compose-teardown.png)
-
-## AI Assistance Disclosure
-
-ChatGPT assisted with command guidance, troubleshooting, and documentation drafts. I executed the laboratory commands and captured the screenshots. AI-assisted text should be reviewed and revised to match my understanding before submission.
+Compared with my initial understanding of cloud computing, I now see it as more than storing files online. It also involves configuring services, connecting components, checking their status, and managing their lifecycle. I still need practice, but I am becoming more comfortable interpreting terminal output and troubleshooting errors.
